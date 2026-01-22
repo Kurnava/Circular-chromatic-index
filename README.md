@@ -10,11 +10,11 @@ These files are not standalone. They are designed to work as a part of external 
 To better understand the implementation, here is how the source files relate to the project goals:
 
 
-1. # Algorithmic Optimization
+# Algorithmic Optimization
 **paths.hpp**: Contains the optimized backtracking implementations for circuit enumeration, including **all_circuits_fast** and **all_circuits_fast_mod**. This is the core of the speed-up for SAT clause generation.
 
 
-2. # Exact Methods (Solvers)
+# Exact Methods (Solvers)
 **sat/cnf_circular_colouring.hpp**: Implements the logic for generating SAT clauses, including GCD reduction and tight cycle detection.
 
 **sat/exec_circular_colouring.hpp**: The execution wrapper for standard SAT solvers (e.g., Kissat).
@@ -22,11 +22,11 @@ To better understand the implementation, here is how the source files relate to 
 **sat/exec_circular_cpsat.hpp**: Integration with Google OR-Tools CP-SAT solver, providing a constraint programming alternative for complex instances.
 
 
-3. # Heuristic Methods & Invariants
+# Heuristic Methods & Invariants
 **invariants/fractional_cvd.hpp**: Contains the randomized heuristic solver based on local search (inspired by Cluster Vertex Deletion methods) used for fast verification of larger graphs.
 
 
-4. # Testing Suite
+# Testing Suite
 **tests/invariants/test_fractional_cvd.cpp**: Validation of the heuristic and CVD-related logic.
 
 **tests/sat/test_circular_colouring.cpp**: Standard regression tests for the SAT solver.
